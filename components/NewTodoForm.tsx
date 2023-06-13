@@ -11,8 +11,8 @@ const NewTodoForm = () => {
     if (!title || typeof title !== "string") {
       return
     } else {
+      await createTodoAction(title)
       formRef.current?.reset()
-      return await createTodoAction(title)
     }
   }
 
